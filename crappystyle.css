@@ -15,6 +15,7 @@ body{
     );
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height:     6000px;
 }
 h1{
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -25,22 +26,17 @@ H2{
     text-align: center;
     color:cadetblue
 }
-
 #anim1{
     height : 200px;
     width: 600px;
-    transform: rotateZ(30deg);
-    animation-name: moveleftandright;
-    animation-duration: 1s;
+    animation-name: moveleft;
+    animation-duration: 0.4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-#anim1{
-    height : 200px;
-    width: 600px;
-    transform: rotateZ(-30deg);
-    animation-name: moveleft;
-    animation-duration: 0.2s;
+#enemy{
+    animation-name: rotate360;
+    animation-duration: 0.4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -51,6 +47,14 @@ H2{
     }
     100%{
         margin-left:800px;
-        transform: rotateZ(19deg);
+        transform: rotateZ(-19deg);
+    }
+}
+@keyframes rotate360{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
     }
 }
